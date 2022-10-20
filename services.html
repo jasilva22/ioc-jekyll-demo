@@ -1,0 +1,40 @@
+---
+layout: default
+title: Services
+fruit:
+ - title: Apple
+   description: The best fruit.
+ - title: Pineapple
+   description: The second best fruit.
+ - title: Banana
+   description: The worst fruit.
+ - title: Pear
+   description: What even is this?
+---
+
+<section>
+
+    {% for item in page.fruit %} <!--item can be called anything, but item is just easy to remember, all we need is to make sure item above matched item below (whatever word you use as long as they match). fruit is the name of our array, which is also above-->
+    <div class="card">
+        <h2>{{item.title}}</h2>
+        <p>{{item.description}}</p>
+    </div>
+    {% endfor %}
+
+    <!-- <div class="card">
+        <h2>Apple</h2>
+        <p>The best fruit.</p>
+    </div>
+    <div class="card">
+        <h2>Pineapple</h2>
+        <p>The second best fruit.</p>
+    </div>
+    <div class="card">
+        <h2>Banana</h2>
+        <p>The worst fruit.</p>
+    </div>
+    <div class="card">
+        <h2>Pear</h2>
+        <p>What even is this?</p>
+    </div> -->
+</section>

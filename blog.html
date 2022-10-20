@@ -1,0 +1,40 @@
+---
+layout: default
+title: Blog page
+news:
+ - title: Big sale
+   description: exciting things are happening
+   date: Jan 13th
+   category: promo
+   url: https://www.sale.com
+ - title: New Puppy
+   description: meet our lil guy Roscoe
+   date: Aug 22nd
+   category: news
+   url: https://www.puppy.com
+ - title: Big Hi-5
+   description: shoutout to our new employee!
+   date: Oct 13th
+   category: news
+   url: https://www.sale.com
+---
+
+<section class="grid-spaceBetween padded mob-padded-0 bg-featured latest-news grid-spaceBetween horizontal-scroll">
+  
+    {% for item in page.news %}
+    <!--  First Card  -->
+      <div class="col-4_xs-8 card">
+        <div class="bg-img">
+          <span>{{item.category}}</span>
+        </div>
+        <div class="post-info">
+          <p class="date">{{item.date}}</p>
+          <h3>{{item.title}}</h3>
+          <p>{{item.description}}</p>
+          <a href="{{item.url}}">Find out more &nbsp; &#10141 </a>
+        </div>
+      </div>
+    </div>
+
+    {% endfor %}
+  </section> 
